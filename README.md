@@ -1,6 +1,5 @@
 
-
-![Alt text](/tadaya/hangerz/ERD.png "Hangerz ERD")
+![SCREENSHOT](ERD.png "Hangerz ERD")
 
 
 
