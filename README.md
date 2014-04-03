@@ -1,4 +1,4 @@
-![alt tag](https://raw.github.com/tadaya/hangerz/master/ERD.png)
+![alt tag](https://raw.github.com/tadaya/hangerz/ERD.png)
 
 
 [Pivotal Tracker] https://www.pivotaltracker.com/projects/1052424/overview
