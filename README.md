@@ -1,9 +1,6 @@
 
 
-
-![Alt text](/path/to/ERD.png "Hangerz ERD")
-
-https://www.dropbox.com/s/l76c8m9uu73125h/Screenshot%202014-04-03%2016.16.18.png
+![Alt text](/tadaya/hangerz/ERD.png "Hangerz ERD")
 
 
 
