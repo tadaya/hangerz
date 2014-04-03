@@ -1,5 +1,4 @@
-
-![SCREENSHOT](ERD.png "Hangerz ERD")
+![ScreenShot](ERD.png "Hangerz ERD")
 
 
 
