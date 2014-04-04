@@ -13,6 +13,6 @@ test:
 
 production:
   adapter: postgresql
-  database: hangerz_prod
+  database: hangerz
   pool: 5
   timeout: 5000

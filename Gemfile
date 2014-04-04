@@ -6,6 +6,8 @@ gem 'rails', '4.0.3'
 # Use PG as the database for Active Record
 gem 'pg'
 
+gem 'paperclip'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -42,8 +44,10 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
 
-gem 'rspec-rails', group: [:development, :test]
-
-gem 'jasmine', group: [:development, :test]
+group :development, :test do
+  gem 'debugger'
+  gem 'rspec-rails', '~>3.0.0.beta2'
+  gem 'jasmine'
+  gem 'shoulda-matchers'
+end
