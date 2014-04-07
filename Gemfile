@@ -37,6 +37,10 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+gem 'ejs'
+
+gem 'rails-backbone'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -51,4 +55,7 @@ group :development, :test do
   gem 'jasmine'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+  gem 'launchy'
 end

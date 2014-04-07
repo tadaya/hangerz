@@ -1,7 +1,7 @@
 Hangerz.Views.Posts ||= {}
 
 class Hangerz.Views.Posts.EditView extends Backbone.View
-  template : JST ['backbonetemplaces/pieces/edit']
+  template : JST['backbonetemplaces/pieces/edit']
 
   events : 'submit #edit-piece' : 'update'
 

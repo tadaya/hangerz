@@ -1,3 +1,6 @@
+
+
+
 <h1> HANGERZ </h1>
 
 <h3> <%= link_to "Sign Up", new_user_path unless session[:user_id] %> </h3>
@@ -23,10 +26,21 @@
 <%end%>
 
 
+<div id="pieces"></div>
+
 <script type="text/javascript">
+  console.log("HELLO")
   $(function() {
-    window.router = new Hangerz.Routers.Hangerz({
+    window.router = new Hangerz.Routers.PiecesRouter({
       pieces: <%= @pieces.to_json.html_safe -%>});
     Backbone.history.start();
   });
 </script>
+
+
+
+
+
+
+
+

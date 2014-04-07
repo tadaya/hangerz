@@ -9,14 +9,16 @@
 <body>
 
 <header>
-  <ul class="nav">    
-    <li><%= link_to "Profile", user_path(session[:user_id]) unless session[:user_id].nil?%></li>
-    <li> <%= link_to("Log Out", "/logout", method: "delete") unless session[:user_id].nil? %>
-  </li>
-  </ul>
+  <% if session[:user_id] %>
+    <ul class="nav">    
+      <li> <%= link_to("Log Out #{current_user.first_name}", "/logout", method: "delete") %> </li>
+    </ul>
+  <% end %>
 </header>
 
 <%= yield %>
 
+<%= debug session.to_hash %>
+<%= debug current_user %>
 </body>
 </html>
