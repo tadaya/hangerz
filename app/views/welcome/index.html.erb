@@ -1,1 +1,32 @@
 <h1> HANGERZ </h1>
+
+<h3> <%= link_to "Sign Up", new_user_path unless session[:user_id] %> </h3>
+
+
+<% unless session[:user_id] %>
+  <%= form_tag "/session" do %>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%= submit_tag "Log in", class: 'button' %>
+  <% end %>
+<%end%>
+
+<% unless flash[:message].nil? %>
+  <h3> Error </h3>
+  <ul>
+    <li><%= flash[:message] %></li>
+  </ul>
+<%end%>
+
+
+<script type="text/javascript">
+  $(function() {
+    window.router = new Hangerz.Routers.Hangerz({
+      pieces: <%= @pieces.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>

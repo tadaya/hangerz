@@ -1,0 +1,23 @@
+<% form_for @piece do |f| %>
+  <%= f.label :type %>
+  <%= f.text_field :type %>
+
+  <%= f.label :color %>
+  <%= f.color_field :color %>
+
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+
+  <%= f.label :date_purchased %>
+  <%= f.date_field :date_purchased %>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  Image: <%= f.file_field :picture, placeholder:"Clothing Image"%>
+
+  <%= f.submit "Add to Wardrobe" %>
+<%end%>
