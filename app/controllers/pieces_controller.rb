@@ -58,7 +58,7 @@ class PiecesController < ApplicationController
   end
 
   def piece_params
-    params.require(:piece).permit(:color, :type, :picture)
+    params.require(:piece).permit(:color, :picture, :link, :brand, :size, :price, :source, :note)
   end
   
 end 

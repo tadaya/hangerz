@@ -16,4 +16,6 @@ class Hangerz.Views.Pieces.PieceView extends Backbone.View
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))
+    $(@el).css("background-image", "url(#{@model.attributes.link})")
+    $(@el).addClass("piece_view")
     return this

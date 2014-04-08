@@ -8,18 +8,16 @@
 </head>
 <body>
 
-<header>
-  <% if session[:user_id] %>
-    <ul class="nav">    
-      <li> <%= link_to("Log Out #{current_user.first_name}", "/logout", method: "delete") %> </li>
-    </ul>
-  <% end %>
-</header>
+<div class="page_wrapper">
+<%if session[:user_id]%>
+  <header>
+    <div class="site_title"> HANGERZ </div>
+      <span class="nav"> <%= link_to("Log Out #{current_user.first_name}", "/logout", method: "delete") %> </span>
+  </header>
+  <%end%>
 
-<%= yield %>
+  <%= yield %>
 
-<%= debug session.to_hash %>
-<%= debug current_user %>
-<%= debug params %>
-</body>
+</div>
+</body> 
 </html>

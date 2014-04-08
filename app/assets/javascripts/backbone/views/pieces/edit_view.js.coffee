@@ -12,11 +12,11 @@ class Hangerz.Views.Pieces.EditView extends Backbone.View
     @model.save(null, 
       success : (piece) => 
       @model=piece
+      console.log(piece)
       window.location.hash = '/#{@model.id}'
     )
 
   render : ->
-    console.log(@model)
     $(@el).html(@template(@model.toJSON() ))
 
     this.$("form").backboneLink(@model)

@@ -1,30 +1,42 @@
-<h1> HANGERZ </h1>
+<div class="splash"> 
 
-<h3> <%= link_to "Sign Up", new_user_path unless session[:user_id] %> </h3>
+<div class="top">
+</div> 
+  
+<div class="splash_black_bar">
+<div class="splash_title">
+  HANGERZ
+</div>
 
 
-<% unless session[:user_id] %>
-  <%= form_tag "/session" do %>
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
 
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+<div class="login_signup_panel">
+  <h2> <%= link_to "Sign Up", new_user_path unless session[:user_id] %> </h2>
 
-    <%= submit_tag "Log in", class: 'button' %>
-  <% end %>
-<%end%>
+  <% unless session[:user_id] %>
+    <%= form_tag "/session" do %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %>
 
-<% unless flash[:message].nil? %>
-  <h3> Error </h3>
-  <ul>
-    <li><%= flash[:message] %></li>
-  </ul>
-<%end%>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
 
-<% if current_user %>
-  <%= link_to "Wardrobe", pieces_path %>
-<% end %>
+      <%= submit_tag "Log in", class: 'button' %>
+    <% end %>
+  <%end%>
+
+  <% unless flash[:message].nil? %>
+    <h3> Error </h3>
+    <ul>
+      <li><%= flash[:message] %></li>
+    </ul>
+  <%end%>
+
+</div>
+</div>
+
+<div class="bottom"> </div>
+</div>
 
 
 

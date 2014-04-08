@@ -20,12 +20,13 @@ class Hangerz.Routers.PiecesRouter extends Backbone.Router
 
   show: (id) ->
     piece = @pieces.get(id)
+    console.log("show")
+    console.log(piece)
 
     @view = new Hangerz.Views.Pieces.ShowView(model: piece)
     $("#pieces").html(@view.render().el)
 
   edit: (id) ->
     piece = @pieces.get(id)
-    console.log(piece)
     @view = new Hangerz.Views.Pieces.EditView(model: piece)
     $("#pieces").html(@view.render().el)

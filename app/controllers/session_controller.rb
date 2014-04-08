@@ -15,7 +15,7 @@ class SessionController < ApplicationController
           render json: {success: true, id: session[:user_id]}
         end
         format.html do
-          redirect_to ( root_path )
+          redirect_to ( pieces_path )
         end
       end
     else
