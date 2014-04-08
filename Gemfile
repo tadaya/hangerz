@@ -39,6 +39,8 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'ejs'
 
+gem 'aws-sdk'
+
 gem 'rails-backbone'
 
 # Use unicorn as the app server
@@ -58,4 +60,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'launchy'
+  gem 'pry'
 end

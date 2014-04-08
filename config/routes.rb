@@ -2,6 +2,10 @@ Hangerz::Application.routes.draw do
 
   resources :users
 
+  resources :locations
+
+  resources :pieces
+
   root 'welcome#index'
 
 

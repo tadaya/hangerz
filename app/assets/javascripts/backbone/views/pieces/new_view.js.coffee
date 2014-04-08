@@ -6,10 +6,9 @@ class Hangerz.Views.Pieces.NewView extends Backbone.View
   events:
     "submit #new-piece": "save"
 
-
   constuctor: (options) ->
     super(options)
-    @model = new @collection.model()
+    @model = new Hangerz.Model.Piece
 
     @model.bind("change:errors", () =>
       this.render()
@@ -24,13 +23,14 @@ class Hangerz.Views.Pieces.NewView extends Backbone.View
     @collection.create(@model.toJSON(),
       success: (piece) =>
         @model = piece
-        window.location.hash = "/#{model.id}"
+        window.location.hash = "/#{@model.id}"
 
       error: (piece, jqXHR) => 
         @model.set({errors: $.parseJSON(jqXHR.responseText)})
     )
     
   render: ->
+    @model = new Hangerz.Models.Piece
     $(@el).html(@template(@model.toJSON() ))
 
     this.$("form").backboneLink(@model)

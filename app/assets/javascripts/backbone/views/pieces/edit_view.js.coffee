@@ -1,7 +1,7 @@
-Hangerz.Views.Posts ||= {}
+Hangerz.Views.Pieces ||= {}
 
-class Hangerz.Views.Posts.EditView extends Backbone.View
-  template : JST['backbonetemplaces/pieces/edit']
+class Hangerz.Views.Pieces.EditView extends Backbone.View
+  template : JST['backbone/templates/pieces/edit']
 
   events : 'submit #edit-piece' : 'update'
 
@@ -10,12 +10,13 @@ class Hangerz.Views.Posts.EditView extends Backbone.View
     e.stopPropagation()
 
     @model.save(null, 
-      success : (post) => 
-      @model=post
+      success : (piece) => 
+      @model=piece
       window.location.hash = '/#{@model.id}'
     )
 
   render : ->
+    console.log(@model)
     $(@el).html(@template(@model.toJSON() ))
 
     this.$("form").backboneLink(@model)

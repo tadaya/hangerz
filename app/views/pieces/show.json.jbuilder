@@ -1,0 +1,1 @@
+json.extract! @piece, :id, :color

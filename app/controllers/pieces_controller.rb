@@ -13,8 +13,11 @@ class PiecesController < ApplicationController
     @piece = Piece.new
   end
 
+  def edit
+  end
+
   def create
-    @post = Piece.new(piece_params)
+    @piece = Piece.new(piece_params)
 
     respond_to do |format|
       if @piece.save
@@ -51,11 +54,11 @@ class PiecesController < ApplicationController
   private
 
   def set_piece
-    @piece = Piece.find(params[:piece_id])
+    @piece = Piece.find(params[:id])
   end
 
   def piece_params
-    params.require(:user).permit(:type, :color, :brand, :size, :date_purchased, :price, :picture)
+    params.require(:piece).permit(:color, :type, :picture)
   end
   
 end 

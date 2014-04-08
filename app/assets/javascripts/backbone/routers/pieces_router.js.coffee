@@ -12,7 +12,7 @@ class Hangerz.Routers.PiecesRouter extends Backbone.Router
 
   newPiece: ->
     @view = new Hangerz.Views.Pieces.NewView( collection: @pieces)
-    $("#posts").html(@view.render().el)
+    $("#pieces").html(@view.render().el)
 
   index: ->
     @view = new Hangerz.Views.Pieces.IndexView(pieces: @pieces)
@@ -21,11 +21,11 @@ class Hangerz.Routers.PiecesRouter extends Backbone.Router
   show: (id) ->
     piece = @pieces.get(id)
 
-    @view = new Hangerz.Views.Posts.ShowView(model: piece)
+    @view = new Hangerz.Views.Pieces.ShowView(model: piece)
     $("#pieces").html(@view.render().el)
 
   edit: (id) ->
     piece = @pieces.get(id)
-
+    console.log(piece)
     @view = new Hangerz.Views.Pieces.EditView(model: piece)
-    $("#pieces").html(@view.render.el)
+    $("#pieces").html(@view.render().el)
