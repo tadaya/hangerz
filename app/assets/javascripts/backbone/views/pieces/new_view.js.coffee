@@ -17,11 +17,12 @@ class Hangerz.Views.Pieces.NewView extends Backbone.View
   save: (e) ->
     e.preventDefault()
     e.stopPropagation()
-
+    console.log(@model)
     @model.unset("errors")
 
     @collection.create(@model.toJSON(),
       success: (piece) =>
+        console.log(piece)
         @model = piece
         window.location.hash = "/#{@model.id}"
 

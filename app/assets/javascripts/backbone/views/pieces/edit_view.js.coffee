@@ -11,9 +11,7 @@ class Hangerz.Views.Pieces.EditView extends Backbone.View
 
     @model.save(null, 
       success : (piece) => 
-      @model=piece
-      console.log(piece)
-      window.location.hash = '/#{@model.id}'
+      window.location.hash = "/#{@model.id}" 
     )
 
   render : ->

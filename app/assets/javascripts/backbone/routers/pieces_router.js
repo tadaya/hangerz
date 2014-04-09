@@ -47,8 +47,6 @@
     PiecesRouter.prototype.show = function(id) {
       var piece;
       piece = this.pieces.get(id);
-      console.log("show");
-      console.log(piece);
       this.view = new Hangerz.Views.Pieces.ShowView({
         model: piece
       });

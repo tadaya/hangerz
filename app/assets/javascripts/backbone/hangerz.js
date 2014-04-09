@@ -7,6 +7,7 @@
 window.Hangerz = {
   Models: {},
   Collections: {},
+  Templates: {},
   Routers: {},
   Views: {},
 };
