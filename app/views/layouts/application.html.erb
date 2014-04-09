@@ -8,16 +8,27 @@
 </head>
 <body>
 
+
 <div class="page_wrapper">
 <%if session[:user_id]%>
   <header>
+
     <div class="site_title"> HANGERZ </div>
-      <span class="nav"> <%= link_to("Log Out #{current_user.first_name}", "/logout", method: "delete") %> </span>
+    <ul class="nav">
+      <li> <%= link_to("Log Out #{current_user.first_name}", "/logout", method: "delete") %> </li>
+      <li> <%= link_to("My Wardrobe", pieces_path) %></li>
+      <li> <%= link_to("Manage", wears_path) %></li>
+    </ul>
   </header>
   <%end%>
 
   <%= yield %>
 
 </div>
+
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+
 </body> 
 </html>

@@ -1,8 +1,8 @@
 Hangerz::Application.routes.draw do
 
-  resources :users
-
+  resources :users 
   resources :locations
+  resources :wears
 
   resources :pieces
 
