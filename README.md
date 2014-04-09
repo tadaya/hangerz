@@ -1,23 +1,29 @@
 #Hangerz
 
-Hangerz is a personal wardrobe organizing app to help you keep track of the clothes that you own. Hangerz presents your own wardrobe similarly to an online retailer, so that everything you own is not only organized but appealing to you!
+*** IN DEVELOPMENT ***
+
+
+### Project Description
+Hangerz is a personal wardrobe organizing app to help users organize their clothing, shoes, and accessories. Users upload photos of their clothes or link to pictures online (from online retailers, online fashion blogs, etc). Hangerz presents users' wardrobes similarly to an online retailer, so that users' possesions are not only organized but appealing as well. 
+
+Users have the option to add details about their possesions such as size, brand, price, etc. Users can also leave notes about thier possesion and tie their possesion to physical places such as "closet" or "bottom drawer" or "cleaners."
 
 This project was built as project for a General Assembly course.
 
 ### Technologies/Frameworks/Libraries Used:
-Ruby on Rails
-Javascript
-Backbone.js
-Underscore.js
-CoffeeScript
-D3
+  * Ruby on Rails
+  * Javascript
+  * Backbone.js
+  * Underscore.js
+  * CoffeeScript 
+  * D3
+  * RSpec
+  * Capybara
 
-ERD:
-[ERD] (https://raw.githubusercontent.com/tadaya/hangerz/master/ERD.png)
+### ERD
 
 ![alt text](https://raw.githubusercontent.com/tadaya/hangerz/master/ERD.png "ERD")
 
-
-Pivotial Tracker:
+### Pivotal Tracker
 [Pivotal Tracker] (https://www.pivotaltracker.com/projects/1052424/overview)
 
