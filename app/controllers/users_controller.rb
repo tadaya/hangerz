@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
 
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to pieces_path
     else
       render(:new)
     end

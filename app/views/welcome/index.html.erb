@@ -1,42 +1,45 @@
-<div class="splash"> 
 
-<div class="top">
-</div> 
-  
-<div class="splash_black_bar">
-<div class="splash_title">
-  HANGERZ
-</div>
+<%unless current_user%>
+  <div class="splash"> 
 
+  <div class="top"></div> 
+    
+  <div class="splash_black_bar">
+  <div class="splash_title">
+    HANGERZ
+  </div>
 
+  <div class="splash_subtitle"> Personal Wardrobe Organizer</div>
 
-<div class="login_signup_panel">
-  <h2> <%= link_to "Sign Up", new_user_path unless session[:user_id] %> </h2>
+  <div class="login_signup_panel">
+    <h2> <%= link_to "Sign Up", new_user_path unless session[:user_id] %> </h2>
 
-  <% unless session[:user_id] %>
-    <%= form_tag "/session" do %>
-      <%= label_tag :email %>
-      <%= email_field_tag :email %>
+    <% unless session[:user_id] %>
+      <%= form_tag "/session" do %>
+        <%= label_tag :email %>
+        <%= email_field_tag :email %>
 
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
 
-      <%= submit_tag "Log in", class: 'button' %>
-    <% end %>
-  <%end%>
+        <%= submit_tag "Log in", class: 'button' %>
+      <% end %>
+    <%end%>
 
-  <% unless flash[:message].nil? %>
-    <h3> Error </h3>
-    <ul>
-      <li><%= flash[:message] %></li>
-    </ul>
-  <%end%>
+    <% unless flash[:message].nil? %>
+      <h3> Error </h3>
+      <ul>
+        <li><%= flash[:message] %></li>
+      </ul>
+    <%end%>
 
-</div>
-</div>
+  </div>
+  </div>
 
-<div class="bottom"> </div>
-</div>
+  <div class="bottom"> </div>
+  </div>
+
+<%end%>
 
 
 

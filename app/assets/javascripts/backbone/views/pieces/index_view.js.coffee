@@ -13,7 +13,7 @@ class Hangerz.Views.Pieces.IndexView extends Backbone.View
     view = new Hangerz.Views.Pieces.PieceView({model : piece})
     @$("tbody").append(view.render().el)
 
-  render: => 
+  render: =>
     $(@el).html(@template(pieces: @options.pieces.toJSON() ))
     @addAll()
 

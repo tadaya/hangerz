@@ -7,3 +7,5 @@ class Hangerz.Models.Piece extends Backbone.Model
 class Hangerz.Collections.PiecesCollection extends Backbone.Collection
   model: Hangerz.Models.Piece
   url: '/pieces'
+
+  
