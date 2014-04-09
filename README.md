@@ -3,7 +3,7 @@
 
 
 ERD:
-![alt tag] https://raw.githubusercontent.com/tadaya/hangerz/master/ERD.png
+![alt text] https://raw.githubusercontent.com/tadaya/hangerz/master/ERD.png
 
 
 Pivotial Tracker:
