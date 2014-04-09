@@ -14,7 +14,8 @@ D3
 
 ERD:
 [ERD] (https://raw.githubusercontent.com/tadaya/hangerz/master/ERD.png)
-![alt text][ERD]
+
+![alt text](https://raw.githubusercontent.com/tadaya/hangerz/master/ERD.png "ERD")
 
 
 Pivotial Tracker:
