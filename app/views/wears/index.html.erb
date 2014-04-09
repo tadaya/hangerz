@@ -1,8 +1,18 @@
 
 <% if current_user %>
-  <h1> Places </h1>
 
-  <h1> Calendar </h1>
+    <div class="dash">
+        <h1> Clothes Count </h1>
+        <h5>Tops: <%= @pieces.length%> </h5>
+        <h5>Bottoms: <%= @pieces.length%> </h5>
+        <h5>Shoes: <%= @pieces.length%> </h5>
+        <h5>Dresses: <%= @pieces.length%> </h5>
+    </div>
+    <div class="dash">
+        <h1> Places </h1>
+    </div>
+    <h1> Calendar </h1>
+
 
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
